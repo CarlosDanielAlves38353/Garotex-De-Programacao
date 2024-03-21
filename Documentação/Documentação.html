@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Documentação</title>
+</head>
+<body>
+  <main>
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide--one">
+          <div>
+            <h2>Carlos Daniel Alves</h2>
+            <p>CEO de Desenvolvimento</p>
+            <a href="Carlos.html" style="color: black;" target="_blank">explore</a>
+            <a style="background-color: black;"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide swiper-slide--two">          
+          <div>
+            <h2>Gabriel Tanagino Alves</h2>
+            <p>
+              Produtor Executivo & Vice CEO
+            </p>
+            <a href="Aline.html" style="color: black;" target="_blank">explore</a>
+            <a style="background-color: black;"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+  
+        <div class="swiper-slide swiper-slide--three">
+  
+          <div>
+            <h2>Aline</h2>
+            <p>
+              Gerente de Design
+            </p>
+            <a href="Aline.html" style="color: black;" target="_blank">explore</a>
+            <a style="background-color: black;"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+  
+        <div class="swiper-slide swiper-slide--four">
+  
+          <div>
+            <h2>Laila</h2>
+            <p>
+          Marketing digital      
+            </p>
+            <a href="Aline.html" style="color: black;" target="_blank">explore</a>
+            <a style="background-color: black;"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+  
+        <div class="swiper-slide swiper-slide--five">
+  
+        <!--  <div>
+            <h2>Form 5</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ex in lectus volutpat egestas. Donec vitae elit vel dolor varius scelerisque a in eros. 
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Dolphin" target="_blank">explore</a>-->
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+    <div style="position: fixed; top: 2%; left: 90%;" class='button'>
+      <input id='button' type='checkbox'>
+      <label for='button'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+        </svg>
+        <div class='button_inner q' onclick="delayRedirect()">
+          <i class='l ion-log-in'></i>
+          <span class='t'> Voltar</span>
+          <span>
+            <i class='tick ion-checkmark-round'></i>
+          </span>
+          <div class='b_l_quad'>
+            <div class='button_spots'></div>
+            <div class='button_spots'></div>
+            <div class='button_spots'></div>
+            <div class='button_spots'></div>
+            <div class='button_spots'></div>
+            <div class='button_spots'></div>
+            <div class='button_spots'></div>
+            <div class='button_spots'></div>
+            <div class='button_spots'></div>
+            <div class='button_spots'></div>
+            <div class='button_spots'></div>
+            <div class='button_spots'></div>
+            <!-- Restante dos elementos removidos por brevidade -->
+          </div>
+        </div>
+      </label>
+    </div>
+  
+    <script>
+      function delayRedirect() {
+        setTimeout(function () {
+          window.location.href = '../Home/TelaPrincipal.html'; // Substitua pelo caminho correto
+        }, 5000); // 5000 milissegundos = 5 segundos
+      }
+    </script>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
