@@ -1,5 +1,5 @@
 const gifUrls = [
-    "../img/Bem-vindo-a--unscreen.gif",
+    "Img/Bem-vindo-a--unscreen.gif",
     
     // Add more GIF URLs as needed
   ];

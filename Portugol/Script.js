@@ -44,7 +44,7 @@ btnSuivant.addEventListener('click', () => {
             cercle.classList.remove('active');
           }
         });
-        progress.style.width = ((currentActive - 1) / (cercles.length - 1)) * 460 + '%';
+        progress.style.width = ((currentActive - 1) / (cercles.length - 1)) * 380 + '%';
         btnPrécédent.disabled = currentActive === 1;
         btnSuivant.disabled = currentActive === cercles.length;
       }
