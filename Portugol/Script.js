@@ -1,8 +1,8 @@
-const btnSuivant = document.querySelector('#suivant');
-console.log(btnSuivant);
+const btnNEXT = document.querySelector('#next-btn');
+console.log(btnNEXT);
 
 const btnPrécédent = document.querySelector('#précédent');
-console.log(btnSuivant);
+console.log(btnNEXT);
 
 const cercles = document.querySelectorAll('.circle');
 console.log(cercles);
@@ -14,8 +14,8 @@ console.log(progress);
 let currentActive = 1;
 console.log(currentActive)
 
-btnSuivant.addEventListener('click', () => {
-    console.log('bouton suivant cliqué')
+btnNEXT.addEventListener('click', () => {
+    console.log('bouton next btn cliqué')
     currentActive++;
   
     if (currentActive > cercles.length) {
@@ -46,10 +46,10 @@ btnSuivant.addEventListener('click', () => {
         });
         progress.style.width = ((currentActive - 1) / (cercles.length - 1)) * 380 + '%';
         btnPrécédent.disabled = currentActive === 1;
-        btnSuivant.disabled = currentActive === cercles.length;
+        btnNEXT.disabled = currentActive === cercles.length;
       }
 
-      document.getElementById("suivant").addEventListener("click", function() {
+      document.getElementById("next-btn").addEventListener("click", function() {
         const destinationCard = document.getElementById("destination-card");
         destinationCard.scrollIntoView({ behavior: "smooth" });
       });
