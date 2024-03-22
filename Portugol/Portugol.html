@@ -74,23 +74,24 @@
             <div class="circle"><h6>4</h6></div>
             <div class="circle"><h6>5</h6></div>         
         </div>
-      <!--  <div class="btnzone">
+    <!--   <div class="btnzone">
             <button class="btn"    id="précédent" disabled>Prev</button>
             <button class="btn" id="suivant">Next</button>
-        </div>-->       
+        </div>-->  
     </main>
     <div class="card-container">
       <div class="card" id= "card-p1" style="width: 300px; height: 400px; top: 25%; left: 100px">
         <div class="card-body">
           <h6 class="card-title">First Step</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">Vamos ao primeiro passo, instalar o Portugol</p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">click no link a baixo</li>
           <li class="list-group-item">Dapibus ac facilisis in</li>
           <li class="list-group-item">Vestibulum at eros</li>
         </ul>
         <div class="card-body">
+          <a href="" ><h4>Download</h4></a>
           <button class="card-link" id="next-btn" >
             <i class="fas fa-arrow-right"></i>
           </button>
@@ -105,9 +106,36 @@
     </div>
 
     <script>
+      // Variáveis globais
+      let currentActive = 1;
+      const cercles = document.querySelectorAll('.circle');
+      const progress = document.querySelector('#progress');
+
+      // Função para atualizar o progresso
+      function update() {
+        cercles.forEach((cercle, index) => {
+          if (index < currentActive) {
+            cercle.classList.add('active');
+          } else {
+            cercle.classList.remove('active');
+          }
+        });
+        progress.style.width = ((currentActive - 1) / (cercles.length - 1)) * 380 + '%';
+        document.getElementById("précédent").disabled = currentActive === 1;
+        document.getElementById("suivant").disabled = currentActive === cercles.length;
+      }
+
+      // Event listener para o botão "Next"
       document.getElementById("next-btn").addEventListener("click", function() {
-          document.getElementById("new-card").style.display = "block"; // Mostra o novo card
-          document.getElementById("card-p1").style.display ="none";
+        document.getElementById("new-card").style.display = "block"; // Mostra o novo card
+        document.getElementById("card-p1").style.display = "none";
+
+        // Atualiza o progresso
+        currentActive++;
+        if (currentActive > cercles.length) {
+          currentActive = cercles.length;
+        }
+        update();
       });
     </script>
     
