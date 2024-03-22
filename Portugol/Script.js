@@ -48,3 +48,8 @@ btnSuivant.addEventListener('click', () => {
         btnPrécédent.disabled = currentActive === 1;
         btnSuivant.disabled = currentActive === cercles.length;
       }
+
+      document.getElementById("suivant").addEventListener("click", function() {
+        const destinationCard = document.getElementById("destination-card");
+        destinationCard.scrollIntoView({ behavior: "smooth" });
+      });
